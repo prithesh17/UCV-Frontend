@@ -1,0 +1,49 @@
+/* Container styling */
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Content styling */
+  .not-found-content {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .not-found-content h1 {
+    font-size: 8em;
+    margin: 0;
+    color: #ff6f61;
+  }
+  
+  .not-found-content p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+    color: #666;
+  }
+  
+  .not-found-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .not-found-content a:hover {
+    background-color: #e55a50;
+  }
+  

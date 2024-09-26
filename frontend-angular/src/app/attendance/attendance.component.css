@@ -1,0 +1,132 @@
+.attendance-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Heading styling */
+  h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #34495e;
+  }
+  
+  /* Input and select field styling */
+  .form-group input,
+  .form-group select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  /* Radio button styling */
+  .form-group .radio-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-group .radio-group input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+
+  .success-message {
+    margin-top: 20px;
+    padding: 10px;
+    color: #2ecc71;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #2ecc71;
+    border-radius: 5px;
+    background-color: #e8f8f5;
+  }
+  
+  .error-message {
+    margin-top: 20px;
+    padding: 10px;
+    color: #e74c3c;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    background-color: #fdecea;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .attendance-container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .form-group label {
+      font-size: 14px;
+    }
+  
+    .form-group input,
+    .form-group select {
+      font-size: 13px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+  

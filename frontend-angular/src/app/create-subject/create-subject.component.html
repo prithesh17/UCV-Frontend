@@ -1,0 +1,47 @@
+<div class="create-subject-container admin-register-container">
+  <h2>Create Subject</h2>
+  <form (ngSubmit)="onSubmit(createSubjectForm)" #createSubjectForm="ngForm">
+    <div class="form-group">
+      <label for="subjectName">Subject Name</label>
+      <input type="text" id="subjectName" name="subjectName" ngModel required placeholder="Enter subject name">
+      <div *ngIf="createSubjectForm.submitted && !createSubjectForm.controls['subjectName']?.valid" class="error-message">
+        Subject Name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="subjectCode">Subject Code</label>
+      <input type="text" id="subjectCode" name="subjectCode" ngModel required pattern="[A-Z0-9]+" placeholder="Enter subject code in capital letters">
+      <div *ngIf="createSubjectForm.submitted && !createSubjectForm.controls['subjectCode']?.valid" class="error-message">
+        Subject Code is required and should be in capital letters.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="facultyName">Faculty Name</label>
+      <input type="text" id="facultyName" name="facultyName" ngModel required placeholder="Enter faculty name">
+      <div *ngIf="createSubjectForm.submitted && !createSubjectForm.controls['facultyName']?.valid" class="error-message">
+        Faculty Name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" ngModel required placeholder="Enter valid email address">
+      <div *ngIf="createSubjectForm.submitted && !createSubjectForm.controls['email']?.valid" class="error-message">
+        Valid Email is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" ngModel required minlength="6" placeholder="Enter minimum 6 characters">
+      <div *ngIf="createSubjectForm.submitted && !createSubjectForm.controls['password']?.valid" class="error-message">
+        Password is required and should be at least 6 characters.
+      </div>
+    </div>
+    <button type="submit" [disabled]="!createSubjectForm.valid">Create Subject</button>
+  </form>
+  <div *ngIf="creationSuccess" class="success-message">
+    Subject creation successful! Redirecting to admin dashboard...
+  </div>
+  <div *ngIf="creationError" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>

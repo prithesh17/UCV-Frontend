@@ -1,0 +1,24 @@
+<div class="admin-register-container">
+  <h2>Admin Register</h2>
+  <form (ngSubmit)="onSubmit(adminRegisterForm)" #adminRegisterForm="ngForm">
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" ngModel required email>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" ngModel required minlength="6">
+    </div>
+    <button type="submit" [disabled]="!adminRegisterForm.valid">Register</button>
+  </form>
+  <div *ngIf="registrationSuccess" class="success-message">
+    Registration successful! Redirecting to home...
+  </div>
+  <div *ngIf="registrationFailed" class="error-message">
+    Registration failed! Please try again.
+  </div>
+</div>

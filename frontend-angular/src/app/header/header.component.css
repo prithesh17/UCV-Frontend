@@ -1,0 +1,73 @@
+/* Main header styling */
+header {
+    background: linear-gradient(90deg, #0044cc, #0066ff);
+    color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Container to center the header content */
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  /* Logo and tagline styling */
+  .logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .logo .tagline {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #e0e0e0;
+    margin-top: 5px;
+  }
+  
+  /* Additional styles for a modern look */
+  .logo h1, .logo .tagline {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  header::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #ffcc00;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Adding a subtle animation */
+  .header-container {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Adding responsive design */
+  @media (max-width: 768px) {
+    .logo h1 {
+      font-size: 1.8em;
+    }
+    
+    .logo .tagline {
+      font-size: 1em;
+    }
+  }
+  

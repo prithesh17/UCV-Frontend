@@ -1,0 +1,40 @@
+<div class="create-student-container admin-register-container">
+  <h2>Create Student</h2>
+  <form (ngSubmit)="onSubmit(createStudentForm)" #createStudentForm="ngForm">
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" ngModel required placeholder="Enter full name">
+      <div *ngIf="createStudentForm.submitted && !createStudentForm.controls['fullName']?.valid" class="error-message">
+        Full Name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="usn">University Seat Number</label>
+      <input type="text" id="usn" name="usn" ngModel required pattern="[A-Z0-9]+" placeholder="Enter USN in capital letters">
+      <div *ngIf="createStudentForm.submitted && !createStudentForm.controls['usn']?.valid" class="error-message">
+        University Seat Number is required and should be in capital letters.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" ngModel required placeholder="Enter valid email address">
+      <div *ngIf="createStudentForm.submitted && !createStudentForm.controls['email']?.valid" class="error-message">
+        Valid Email is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" ngModel required minlength="6" placeholder="Enter minimum 6 characters">
+      <div *ngIf="createStudentForm.submitted && !createStudentForm.controls['password']?.valid" class="error-message">
+        Password is required and should be at least 6 characters.
+      </div>
+    </div>
+    <button type="submit" [disabled]="!createStudentForm.valid">Create Student</button>
+  </form>
+  <div *ngIf="creationSuccess" class="success-message">
+    Student creation successful! Redirecting to admin dashboard...
+  </div>
+  <div *ngIf="creationError" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>

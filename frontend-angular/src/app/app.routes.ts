@@ -1,0 +1,34 @@
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AdminRegisterComponent } from './admin-register/admin-register.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { StudentLoginComponent } from './student-login/student-login.component';
+import { FacultyLoginComponent } from './faculty-login/faculty-login.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
+import { FacultyDashboardComponent } from './faculty-dashboard/faculty-dashboard.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { CreateSubjectComponent } from './create-subject/create-subject.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AttendanceComponent } from './attendance/attendance.component';
+import { MarksComponent } from './marks/marks.component';
+import { StudentAttendanceComponent } from './student-attendance/student-attendance.component';
+import { StudentMarksComponent } from './student-marks/student-marks.component';
+
+export const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'admin-register', component: AdminRegisterComponent },
+  { path: 'admin-login', component: AdminLoginComponent },
+  { path: 'admin-dashboard', component: AdminDashboardComponent },
+  { path: 'create-student', component: CreateStudentComponent },
+  { path: 'create-subject', component: CreateSubjectComponent },
+  { path: 'student-login', component: StudentLoginComponent },
+  { path: 'student-dashboard', component: StudentDashboardComponent },
+  { path: 'faculty-login', component: FacultyLoginComponent },
+  { path: 'faculty-dashboard', component: FacultyDashboardComponent },
+  { path: 'attendance', component: AttendanceComponent },
+  { path: 'marks', component: MarksComponent },
+  { path: 'student-attendance', component: StudentAttendanceComponent },
+  { path: 'student-marks', component: StudentMarksComponent },
+  { path: '**', component: PageNotFoundComponent } 
+];

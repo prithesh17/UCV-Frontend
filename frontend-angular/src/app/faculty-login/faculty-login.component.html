@@ -1,0 +1,21 @@
+<div class="faculty-login-container admin-login-container">
+    <h2>Faculty Login</h2>
+    <form (ngSubmit)="onSubmit(facultyLoginForm)" #facultyLoginForm="ngForm">
+      <div class="form-group">
+        <label for="subjectCode">Subject Code</label>
+        <input type="text" id="subjectCode" name="subjectCode" ngModel required pattern="[A-Z0-9]+" placeholder="Enter subject code in capital letters">
+        <div *ngIf="facultyLoginForm.submitted && !facultyLoginForm.controls['subjectCode']?.valid" class="error-message">
+          Subject Code is required and should be in capital letters.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" ngModel required minlength="6">
+      </div>
+      <button type="submit" [disabled]="!facultyLoginForm.valid">Login</button>
+    </form>
+    <div *ngIf="loginError" class="error-message">
+      Login failed! Please check your subject code and password and try again.
+    </div>
+  </div>
+  
